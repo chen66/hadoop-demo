@@ -45,7 +45,7 @@ public class WordCount {
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
         if (otherArgs.length < 2) {
             System.err.println("Usage: wordcount <in> [<in>...] <out>");
-            System.exit(2);
+            System.exit(1);
         }
         Job job = Job.getInstance(conf, "word count");
         job.setJarByClass(WordCount.class);
